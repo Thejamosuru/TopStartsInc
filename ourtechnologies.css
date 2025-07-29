@@ -13,15 +13,16 @@ header {
     background-color: white;
 }
 
-img {
-    flex: 2;
+header h1 {
+    flex: 3;
     width: 50px;
-    margin: 20px 70px;
+    margin: 20px;
     cursor: pointer;
+    color: orangered;
 }
 
 nav {
-    flex: 10;
+    flex: 9;
 }
 
 nav>ul {
@@ -74,23 +75,26 @@ i {
     margin-right: 10px;
 }
 
-.body {
-    height: 600px;
-    background-color: rgb(244, 246, 247);
+.technologies {
     text-align: center;
-    padding: 70px 0 0 0;
+    background:white;
+    padding: 100px 60px 60px;
+    height: 100%;
+    font-family: "Muli", sans-serif;
 }
 
-h4 {
-    color: blue;
+.ser {
+    color:blue;
+    font-size: 18px;
 }
 
-h1 {
-    font-size: 45px;
-    margin: 20px;
+.technologies h1 {
+    color:black;
+    margin: 20px 0;
 }
 
 .move {
+    margin-top: 50px;
     width: 100px;
     height: 7px;
     border-radius: 10px;
@@ -119,50 +123,45 @@ h1 {
     }
 }
 
-.contact {
+.framework {
+    color: gray;
+    margin: 20px 0 10px 0;
+}
+
+.framework+p {
+    color: gray;
+}
+
+.ourtech {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
-    margin: 60px 0 0 0;
+    margin-top: 30px;
+}
 
+.ourtech div {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 10px;
+    padding: 1px;
+}
+.ourtech div:hover{
+    box-shadow: 5px 5px 2px 2px rgb(213, 210, 210);
+}
+
+.ourtech img {
+    width: 100%;
+}
+
+.ourtech h3 {
+    color: rgb(95, 95, 240);
+    margin: 30px 0 10px 0;
 
 }
 
-.boxshwd {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    margin: 10px 20px 5px;
-    padding: 20px 20px 10px 20px;
-    background: white;
-    border-radius: 5px;
-
-}
-
-[class *="fa-phone"],
-[class *="fa-location-pin"],
-[class *="fa-envelope"] {
-    color: blue;
-    font-size: 40px;
-}
-
-.border {
-    border: 2px solid lightgray;
-    padding: 20px;
-    border-radius: 5px;
-    transition: all 0.5s linear;
-}
-
-.border:hover {
-    border: 2px solid blue;
-
-}
-
-h3 {
-    margin: 6px;
-}
-
-.info {
-    margin: 8px;
+.ourtech p {
     color: gray;
+    margin: 0 30px 20px;
+    line-height: 25px;
 }
 
 .footer {
@@ -172,25 +171,42 @@ h3 {
 }
 
 .foot {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(4, 1fr);
     margin: 0 0 0 40px;
     border-bottom: 1px solid grey;
-    padding:0 0 40px;
+    padding: 0 0 40px;
 }
 
-.footer img {
-    position: relative;
-    right: 65px;
-    bottom: 30px;
-    width: 250px;
+.orginfo {
+    flex: 4;
+}
+
+.quicklinks {
+    flex: 3;
+}
+
+.tchno {
+    flex: 3;
+}
+
+.coninf {
+    flex: 3;
+    margin: 0 40px 0 0;
+}
+
+.footer h1 {
+    margin-top: 40px;
+    color: orangered;
+    /* background-color: ; */
 }
 
 .empower {
     font-family: "Muli", sans-serif;
     ;
+    width: 380px;
     color: white;
-    margin: 0 0 10px 0;
+    margin: 40px 40px 10px 0;
     line-height: 30px;
     position: relative;
     bottom: 20px;
@@ -212,8 +228,8 @@ h3 {
     color: rgb(74, 74, 237);
 }
 
-[class *="facebook"] {
-    padding: 10px;
+.fb{
+    padding: 10px 25px 10px 10px;
     width: 40px;
     text-align: center;
     background: rgb(40, 184, 240);
@@ -221,17 +237,18 @@ h3 {
     border-radius: 5px;
 }
 
-[class *="instagram"] {
-    padding: 10px;
+.insta {
+    padding: 10px 25px 10px 10px;
     width: 40px;
     text-align: center;
     background: rgb(229, 57, 114);
     color: white;
     border-radius: 5px;
+    margin: 0 10px;
 }
 
-[class *="youtube"] {
-    padding: 10px;
+.utube{
+    padding: 10px 25px 10px 10px;
     width: 40px;
     text-align: center;
     background: red;
@@ -246,7 +263,7 @@ h3 {
 
 .foot div ul>li {
     list-style: none;
-    margin: 20px
+    margin: 20px 0;
 }
 
 .foot div ul a {
@@ -264,13 +281,13 @@ h3 {
 
 [class *="bottom"] {
     width: 40px;
-    height: 100%;
-    padding: 13px;
+    height: 40px;
+    padding: 13px 20px 13px 10px ;
     font-size: 15px;
     color: white;
     border-radius: 50%;
-    text-align: center;
     background: rgb(65, 87, 232);
+    margin: 0 10px 0 0;
 }
 
 .con-info {
@@ -285,13 +302,14 @@ h3 {
     font-family: Muli, sans-serif
 }
 
-.font+p,.ga {
+.font+p,
+.ga {
     color: rgb(177, 173, 173);
     font-family: Muli, sans-serif
 }
 
 
-.copy{ 
+.copy {
     margin: 30px 0 0 45px;
     display: flex;
     justify-content: space-between;

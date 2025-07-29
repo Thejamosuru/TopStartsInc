@@ -1,0 +1,815 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: "Muli", sans-serif; */
+}
+
+/*-----Header-----*/
+
+header {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+header h1 {
+    flex: 3;
+    width: 50px;
+    margin: 20px;
+    cursor: pointer;
+    color: orangered;
+}
+
+nav {
+    flex: 9;
+}
+
+nav>ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+nav li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    font-size: 13px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*------Banner-----*/
+
+.banner {
+    background: url(./Images/home-banner-hero-bg1);
+    padding: 50px 0 0 60px;
+    height: 870px;
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+    justify-content: space-around;
+
+
+}
+
+.banner>.bnrinfo {
+    margin: 150px 0 0 0;
+    height: 500px;
+}
+
+.banner h4 {
+    color: white;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    margin: 20px 0 30px 20px;
+}
+
+.banner h1 {
+    font-size: 60px;
+    font-family: "Muli", sans-serif;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.bnrinfo p {
+    color: white;
+    font-family: "Muli", sans-serif;
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+}
+
+.btnmain {
+    display: flex;
+
+    margin: 40px 20px 0 0;
+}
+
+.btnmain>button {
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    border-style: none;
+    color: white;
+    background: rgb(110, 233, 192);
+    font-size: 17px;
+
+}
+
+.cnt {
+    display: flex;
+    margin-right: 20px;
+
+}
+
+.cnt>i {
+    border: 1px solid;
+    margin: 0 40px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding: 18px;
+    font-size: 30px;
+    color: white;
+}
+
+.phnum {
+    position: relative;
+    bottom: 13px;
+    right: 20px;
+}
+
+.phnum>p {
+    font-size: 16px;
+}
+
+.phnum>h3 {
+    color: white;
+    font-family: "Muli", sans-serif;
+    margin-top: -10px;
+}
+
+.imgaes {
+    margin-top: 90px;
+}
+
+[src *="main-img"] {
+    width: 710px;
+    position: relative;
+    bottom: 50px;
+    margin: 0px;
+}
+
+[src *="shape-img-1"] {
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    bottom: 250px;
+    left: 710px;
+
+    animation: img 5s linear infinite;
+}
+
+@keyframes img {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(40px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+[src *="home-roket"] {
+    position: relative;
+    bottom: 720px;
+    width: 140px;
+    left: 500px;
+    animation: rocket 3s linear infinite
+}
+
+@keyframes rocket {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+[src *="home-box"] {
+    width: 60px;
+    position: relative;
+    right: 140px;
+    bottom: 250px;
+    animation: box 15s linear infinite;
+    transform: rotate(359deg);
+
+}
+
+@keyframes box {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate3d(360deg);
+    }
+
+}
+
+/*------About Us-----*/
+.welcome {
+    margin: 70px 0;
+    text-align: center;
+}
+
+.welcome>p {
+    color: blue;
+    font-size: 20px;
+    font-family: "Muli", sans-serif;
+}
+
+.welcome>h1 {
+    text-transform: uppercase;
+
+    margin: 10px 0 30px;
+}
+
+.move {
+    margin-top: 50px;
+    width: 100px;
+    height: 7px;
+    border-radius: 10px;
+    background-color: rgb(218, 201, 201);
+    margin: 0 46% 0;
+
+}
+
+.dot {
+    background-color: blue;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: moving 3s linear infinite;
+    position: relative;
+    bottom: 2px;
+}
+
+@keyframes moving {
+    from {
+        left: -10px;
+    }
+
+    to {
+        left: 95px;
+    }
+}
+
+.AIinfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.AIinfo>img {
+    width: 600px;
+    position: relative;
+    bottom: 100px;
+    animation: AI 5s linear infinite;
+    margin-left: 70px;
+}
+
+@keyframes AI {
+
+    0% {
+        transform: translateY(0px)
+    }
+
+    50% {
+        transform: translateY(30px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+
+}
+
+.our {
+    margin: 0 70px 0 0;
+    line-height: 28px;
+}
+
+.info {
+    color: gray;
+    font-size: 20px;
+    font-family: "Muli", sans-serif;
+    margin: 0 0 30px 0
+}
+
+.mission,
+.vision {
+    display: flex;
+    margin: 40px 0;
+}
+
+[class *="fa-building-lock"],
+[class *="fa-laptop-code"] {
+    font-size: 40px;
+    margin: 0 30px 40px 0;
+    background: blue;
+    color: white;
+    padding: 15px 25px 5px 5px;
+    border-radius: 5px;
+}
+
+.mission h3,
+.vision h3 {
+    font-size: 20px
+}
+
+.mission p,
+.vision p {
+    color: gray;
+    font-size: 18px;
+}
+
+.btn {
+    width: 150px;
+    height: 50px;
+    border-style: none;
+    color: white;
+    font-size: 18px;
+    background: blue;
+    border-radius: 5px;
+
+}
+
+/*------Technologies----*/
+.technologies {
+    text-align: center;
+    background: url(./Images/bg-ourtechnologies);
+    padding: 100px 60px 60px;
+    height: 100%;
+    font-family: "Muli", sans-serif;
+}
+
+.ser {
+    color: white;
+    font-size: 18px;
+}
+
+.technologies h1 {
+    color: white;
+    margin: 20px 0;
+}
+
+.framework {
+    color: white;
+    margin: 20px 0 10px 0;
+}
+
+.framework+p {
+    color: white;
+}
+
+.ourtech {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.ourtech div {
+    background: white;
+    margin: 10px;
+    padding: 1px;
+}
+
+.ourtech img {
+    width: 100%;
+}
+
+.ourtech h3 {
+    color: rgb(95, 95, 240);
+    margin: 30px 0 10px 0;
+
+}
+
+.ourtech p {
+    color: gray;
+    margin: 0 30px 20px;
+    line-height: 25px;
+}
+
+/*--------services-------*/
+
+.services {
+    text-align: center;
+    padding: 80px 0;
+    font-family: "Muli", sans-serif;
+}
+
+.services p {
+    color: blue;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.services h1 {
+    font-size: 40px;
+    margin: 18px 0
+}
+
+.appoinment {
+    background: url(./Images/slider14.jpg);
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px 0 0 70px;
+}
+
+[src *="Robo"] {
+    width: 600px;
+}
+
+.app {
+    margin: 40px 0 0 0;
+}
+
+.app>p {
+    color: white;
+    font-size: 20px;
+}
+
+.app>h1 {
+    color: white;
+    font-size: 45px;
+    margin: 20px 0 0 0;
+}
+
+[type *="e"] {
+    width: 270px;
+    border-radius: 5px;
+    border-style: none;
+    height: 50px;
+    margin: 15px 10px 15px 0;
+}
+
+[type *="e"]::placeholder {
+    font-size: 16px;
+    position: relative;
+    left: 10px;
+}
+
+#area {
+    width: 555px;
+    height: 180px;
+    border-radius: 5px;
+    font-size: 16px;
+    border-style: none;
+}
+
+#area::placeholder {
+    position: relative;
+    left: 15px;
+    bottom: 60px;
+}
+
+.bttn {
+    width: 170px;
+    height: 50px;
+    margin-top: 20px;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    background: rgb(48, 48, 230);
+}
+
+.principles {
+    text-align: center;
+    padding: 100px 0;
+    font-family: "Muli", sans-serif;
+}
+
+.principles>p {
+    color: blue;
+}
+
+.principles h1 {
+    font-size: 40px;
+    margin: 20px 0 40px 0;
+}
+
+.rate {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 80px 0;
+}
+
+.quality>i {
+    font-size: 90px;
+    color: rgb(41, 105, 244);
+}
+
+.value>i {
+    font-size: 90px;
+    color: rgb(5, 61, 5);
+}
+
+.focus>i {
+    font-size: 90px;
+    color: orangered;
+}
+
+.rate h2 {
+    margin: 20px 0 5px 0;
+}
+
+.rate p {
+    color: grey;
+    line-height: 25px;
+}
+
+.countbg {
+    background: url(./Images/counter-bg.png);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 70px;
+    justify-content: space-evenly;
+    font-family: "Muli", sans-serif;
+}
+
+.countbg>div {
+    border-right: 1px solid whitesmoke;
+    width: 260px;
+    text-align: center;
+}
+
+.countbg>div>h1 {
+    font-size: 50px;
+    color: white;
+}
+
+.countbg h3 {
+    color: white;
+    margin-top: 10px;
+}
+
+.countbg p {
+    border: 2px solid;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    left: 60px;
+    bottom: 100px;
+    animation: circle 3s linear infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: translateY(0px)
+    }
+
+    50% {
+        transform: translateY(20px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+/*-----Why choose-----*/
+.choose {
+    text-align: center;
+    padding: 100px 0 0 0;
+    font-family: "Muli", sans-serif;
+}
+
+.choose>p {
+    color: blue;
+}
+
+.choose h1 {
+    font-size: 40px;
+    margin: 20px;
+}
+
+.why {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 60px 0 0 30px;
+}
+
+[src *="ab3"] {
+    width: 600px;
+}
+
+[src *="rt2"] {
+    position: relative;
+    right: 180px;
+    bottom: 650px;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+[src *="girl"] {
+    position: relative;
+    right: 200px;
+    bottom: 260px;
+    animation: girl 3s linear infinite;
+
+}
+
+@keyframes girl {
+    0% {
+        transform: translateY(0px)
+    }
+
+    50% {
+        transform: translateY(20px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+.details {
+    text-align: left;
+    margin: 70px 0;
+}
+
+.details>p:nth-child(even) {
+    color: grey;
+    margin: 30px 0;
+}
+
+.details>p:nth-child(odd) {
+    color: blue;
+}
+
+/*-----Footer-----*/
+
+.footer {
+    background: url(./Images/footer-bg-techno.png);
+    height: 600px;
+    padding: 130px 30px;
+}
+
+.foot {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 0 0 40px;
+    border-bottom: 1px solid grey;
+    padding: 0 0 40px;
+}
+
+.orginfo {
+    flex: 4;
+}
+
+.quicklinks {
+    flex: 3;
+}
+
+.tchno {
+    flex: 3;
+}
+
+.coninf {
+    flex: 3;
+    margin: 0 40px 0 0;
+}
+
+.footer h1 {
+    margin-top: 40px;
+    color: orangered;
+    /* background-color: ; */
+}
+
+.empower {
+    font-family: "Muli", sans-serif;
+    ;
+    width: 380px;
+    color: white;
+    margin: 40px 40px 10px 0;
+    line-height: 30px;
+    position: relative;
+    bottom: 20px;
+}
+
+.empower::selection {
+    color: gray;
+    background: rgb(52, 227, 227);
+}
+
+.follow {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+    transition: all 1s linear;
+}
+
+.follow:hover {
+    color: rgb(74, 74, 237);
+}
+
+.fb{
+    padding: 10px 25px 10px 10px;
+    width: 40px;
+    text-align: center;
+    background: rgb(40, 184, 240);
+    color: white;
+    border-radius: 5px;
+}
+
+.insta {
+    padding: 10px 25px 10px 10px;
+    width: 40px;
+    text-align: center;
+    background: rgb(229, 57, 114);
+    color: white;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.utube{
+    padding: 10px 25px 10px 10px;
+    width: 40px;
+    text-align: center;
+    background: red;
+    color: white;
+    border-radius: 5px;
+}
+
+.foot div h2 {
+    color: white;
+    margin: 30px 0;
+}
+
+.foot div ul>li {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.foot div ul a {
+    font-family: "Muli", sans-serif;
+    ;
+    color: white;
+    font-size: 16px;
+    transition: all 1s linear;
+}
+
+.foot div ul a:hover {
+    color: rgb(74, 74, 237);
+    cursor: pointer;
+}
+
+[class *="bottom"] {
+    width: 40px;
+    height: 40px;
+    padding: 13px 20px 13px 10px ;
+    font-size: 15px;
+    color: white;
+    border-radius: 50%;
+    background: rgb(65, 87, 232);
+    margin: 0 10px 0 0;
+}
+
+.con-info {
+    display: flex;
+    margin: 20px 0;
+}
+
+.font {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: Muli, sans-serif
+}
+
+.font+p,
+.ga {
+    color: rgb(177, 173, 173);
+    font-family: Muli, sans-serif
+}
+
+
+.copy {
+    margin: 30px 0 0 45px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: Muli, sans-serif;
+    font-size: 17px;
+}
